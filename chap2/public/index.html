@@ -13,9 +13,10 @@
     <div id="firebaseui-auth-container"></div>
     <div id="loader">Loading...</div>
     <script>
+      // Firebase UI初期化
       const ui = new firebaseui.auth.AuthUI(firebase.auth());
 
-      //UIの設定
+      // UIの設定
       const uiConfig = {
         callbacks: {
           signInSuccessWithAuthResult: (authResult, redirectUrl) => true,
@@ -28,6 +29,7 @@
         privacyPolicyUrl: "404.html",
       };
 
+      // UI描画開始
       ui.start("#firebaseui-auth-container", uiConfig);
     </script>
   </body>
