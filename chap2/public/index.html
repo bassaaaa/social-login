@@ -13,10 +13,10 @@
     <div id="firebaseui-auth-container"></div>
     <div id="loader">Loading...</div>
     <script>
-      const ui = newfirebaseui.auth.AuthUI(firebase.auth());
+      const ui = new firebaseui.auth.AuthUI(firebase.auth());
 
       //UIの設定
-      constuiConfig = {
+      const uiConfig = {
         callbacks: {
           signInSuccessWithAuthResult: (authResult, redirectUrl) => true,
           uiShown: () => (document.getElementById("loader").style.display = "none"),
@@ -28,7 +28,7 @@
         privacyPolicyUrl: "404.html",
       };
 
-      ui.start("#firebaseuiauthcontainer", uiConfig);
+      ui.start("#firebaseui-auth-container", uiConfig);
     </script>
   </body>
 </html>
