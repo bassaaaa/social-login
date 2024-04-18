@@ -37,7 +37,7 @@ module.exports = {
           to: `${__dirname}/public`,
         },
         {
-          from: `${__dirname}/src/style.css`,
+          from: `${__dirname}/src/css`,
           to: `${__dirname}/public/css`,
         },
       ],
